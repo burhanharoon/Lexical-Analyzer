@@ -1,12 +1,13 @@
 import java.awt.*;
 // import java.net.*;
 import java.awt.event.*;
+// import java.lang.ProcessBuilder.Redirect.Type;
 
 public class analyzer extends Frame {
 	Label statement;
 	TextField tf1;
 	TextField tf2;
-	Label l1;
+	static Label l1;
 	Button b;
 
 	analyzer() {
@@ -28,10 +29,12 @@ public class analyzer extends Frame {
 
 		b.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// int a = Integer.parseInt(tf1.getText());
-				String c = "Hello World";
-				l1.setText("Their sum is = " + String.valueOf(c));
+				String a = tf1.getText();
+				// l1.setText("Their sum is = " + myMethod(a));
+				myMethod(a);
+
 			}
+
 		});
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent we) {
@@ -42,5 +45,32 @@ public class analyzer extends Frame {
 
 	public static void main(String[] args) {
 		new analyzer();
+		// myMethod();
+	}
+
+	private static void myMethod(String input) {
+		int state = 0;
+		int i = 0;
+		String lexeme = "";
+		boolean flag = true;
+		input += "/0";
+		char c = '\0';
+
+		while (input.charAt(i) != '\0') {
+			switch (state) {
+				case 0:
+
+					break;
+
+				case 1:
+
+					break;
+			}
+			if (flag)
+				lexeme = lexeme + c;
+
+			i++;
+		}
+
 	}
 }
