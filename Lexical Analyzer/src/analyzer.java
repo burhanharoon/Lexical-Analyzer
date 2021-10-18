@@ -1,5 +1,5 @@
 import java.awt.*;
-import java.net.*;
+// import java.net.*;
 import java.awt.event.*;
 
 public class analyzer extends Frame {
@@ -15,7 +15,7 @@ public class analyzer extends Frame {
 		statement.setBounds(10, 50, 70, 20);
 		tf1 = new TextField();
 		tf1.setBounds(100, 50, 85, 20);
-		b = new Button("Add");
+		b = new Button("YES");
 		b.setBounds(110, 220, 60, 40);
 		l1 = new Label("");
 		l1.setBounds(100, 120, 85, 20);
@@ -28,7 +28,7 @@ public class analyzer extends Frame {
 
 		b.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int a = Integer.parseInt(tf1.getText());
+				// int a = Integer.parseInt(tf1.getText());
 				String c = "Hello World";
 				l1.setText("Their sum is = " + String.valueOf(c));
 			}
